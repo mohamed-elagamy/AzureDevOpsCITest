@@ -13,42 +13,35 @@ namespace UnitTestProject1
         public void TestMethod1()
         {
             int x = 10;
-            int y = 5;
+            int y = 15;
             //int z = x + y;
             CalcService calcService = new CalcService();
             int result = calcService.Add(x, y);
             Assert.AreEqual(15, result);
         }
 
-        [TestMethod]
-        public void TestMethod2()
-        {
-            int x = 10;
-            int y = 5;
-            CalculatorController calculatorController = new CalculatorController();
-            var result = calculatorController.Add(x, y);
-            Assert.AreEqual(15, result);
-        }
+        //[TestMethod]
+        //[ExpectedException(typeof(Exception))]
+        //public void TestMethod2()
+        //{
+        //    int x = int.Parse("10g");
+        //    int y = 5;
+        //    CalculatorController calculatorController = new CalculatorController();
+        //    var result = calculatorController.Add(x, y);
+        //    Assert.AreEqual(15, result);
+        //}
 
-       
 
-        [TestMethod]
-        public void TestMethod4()
-        {
-            try
-            {
-                int x = 10;
-                int y = 5;
-                CalculatorController calculatorController = new CalculatorController();
-                var result = calculatorController.Add(x, y);
-                Assert.AreEqual(15, result);
-            }
-            catch (Exception ex)
-            {
-                Assert.Fail("Expected no exception, but got: " + ex.Message);
-            }
-        }
+        //[TestMethod]
+        //public void TestMethod3()
+        //{
+        //    int x = 10;
+        //    int y = 5;
+        //    CalculatorController calculatorController = new CalculatorController();
+        //    var result = calculatorController.Add(x, y);
+        //    Assert.AreEqual(15, result);
+        //}
 
-       
+
     }
 }
